@@ -1,22 +1,16 @@
 #!/bin/bash
 # baraction.sh for spectrwm status bar
 
-## KERNEL
-kernel() {
-  kernel_version="$(uname -r)"
-  echo -e "  $kernel_version"
-}
-
 ## DISK
 hdd() {
   hdd="$(df -h | awk 'NR==4{print $3, $5}')"
-  echo -e " : $hdd"
+  echo -e "HDD:$hdd"
 }
 
 ## RAM
 mem() {
   mem=`free | awk '/Mem/ {printf "%dM/%dM\n", $3 / 1024.0, $2 / 1024.0 }'`
-  echo -e "$mem%"
+  echo -e "MEM:$mem%"
 }
 
 ## CPU
@@ -30,15 +24,46 @@ cpu() {
   echo -e "CPU: $cpu%"
 }
 
-## NET
+## NETWORK
 net() {
-    echo -e $(doas iw dev wlo1 scan | grep -i rpl)
+  wifi="$(ip a | grep wlo1 | grep inet | wc -l)"
+
+  if [ $wifi = 1 ]; then
+	  echo "ok"
+  else
+	  echo "ng"
+  fi
 }    
+
+## BATTERY
+##bat() {
+#batstat="$(cat /sys/class/power_supply/BAT0/status)"
+#battery="$(cat /sys/class/power_supply/BAT0/capacity)"
+#    if [ $batstat = 'Charging' ]; then
+#    batstat="^"
+#    elif [ $batstat = 'Discharging' ]; then
+#    batstat="v"
+#    elif [[ $battery -ge 5 ]] && [[ $battery -le 19 ]]; then
+#    batstat=""
+#    elif [[ $battery -ge 20 ]] && [[ $battery -le 39 ]]; then
+#    batstat=""
+#    elif [[ $battery -ge 40 ]] && [[ $battery -le 59 ]]; then
+#    batstat=""
+#    elif [[ $battery -ge 60 ]] && [[ $battery -le 79 ]]; then
+#    batstat=""
+#    elif [[ $battery -ge 80 ]] && [[ $battery -le 95 ]]; then
+#    batstat=""
+#    elif [[ $battery -ge 96 ]] && [[ $battery -le 100 ]]; then
+#    batstat=""
+#fi
+
+#echo "$batstat  $battery %"
+##}
 
 ## VOLUME
 vol() {
     vol=`amixer get Master | awk -F'[][]' 'END{ print $4":"$2 }' | sed 's/on://g'`
-    echo -e " : $vol"
+    echo -e "$vol"
 }
 
 SLEEP_SEC=3
@@ -49,6 +74,6 @@ SLEEP_SEC=3
 # So I would love to add more functions to this script but it makes the 
 # echo output too long to display correctly.
 while :; do
-    echo "$(kernel) $(cpu) $(mem) $(hdd) $(net) $(vol)"
+	echo -e "$(cpu) $(mem) $(hdd) $(net) $(vol)"
 	sleep $SLEEP_SEC
 done

@@ -98,12 +98,12 @@ clockinfo() {
       SLEEP_SEC=2
       #loops forever outputting a line every SLEEP_SEC secs
       while :; do
-	echo "+@fg=1; $(cpuicon) +@fg=0; $(cpu)\
-    +@fg=1; $(dateinfo) +@fg=0; $(clockinfo)\
-    +@fg=0; $(vol)\
-    +@fg=1; $(memicon) +@fg=0; $(mem)\
-    +@fg=3; $(hddicon) +@fg=0; $(hdd)\
-    +@fg=4; $(networkicon) +@fg=0; $(ipaddress) +@fg=4; $(vpnconnection)\
+	echo "$(cpuicon) $(cpu)\
+    || $(dateinfo) $(clockinfo)\
+    || $(vol)\
+    || $(memicon) $(mem)\
+    || $(hddicon) $(hdd)\
+    || $(networkicon) $(ipaddress) $(vpnconnection)\
     "
         sleep $SLEEP_SEC
 		done

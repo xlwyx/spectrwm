@@ -4,5 +4,5 @@
 
 ## programs
 
-xorg xorg-xinit spectrwm xlockmore dmenu xterm nitrogen leafpad (* mousepad, gedit, medit, etc..)
+xorg xorg-xinit spectrwm pamixer xlockmore dmenu xterm nitrogen leafpad (* mousepad, gedit, medit, etc..)
 lxappearance mc ranger picom papirus-icon-theme plata-theme  Adapta/adapta-gtk-theme acpi

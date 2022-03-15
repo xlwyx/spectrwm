@@ -4,5 +4,5 @@
 
 ## programs
 
-xorg xorg-xinit spectrwm pamixer xlockmore dmenu xterm nitrogen leafpad (* mousepad, gedit, medit, etc..)
-lxappearance mc ranger picom papirus-icon-theme plata-theme  Adapta/adapta-gtk-theme acpi
+xorg spectrwm pamixer xlockmore dmenu *xterm/urxvtconfig mpv flameshot nitrogen leafpad (* mousepad, gedit, medit, etc..)
+lxappearance mc ranger picom papirus-icon-theme plata-theme  Adapta/adapta-gtk-theme acpi font-awesome5 font-droid-ttf dejavu-fonts-ttf ipafont-fonts-otf noto-fonts-cjk noto-fonts-ttf noto-fonts-ttf-extras Fonts-TLWG-otf

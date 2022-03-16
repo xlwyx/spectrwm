@@ -59,7 +59,7 @@ vol() {
 ##############################
 networkicon() {
 	wire="$(ip a | grep eno1 | grep inet | wc -l)"
-	wifi="$(ip a | grep wlo1 | grep inet | wc -l)"
+	wifi="$(ip a | grep wlp2s0 | grep inet | wc -l)"
 
 	if [ $wire = 1 ]; then
 		echo "ok"
@@ -72,12 +72,12 @@ networkicon() {
 }
 
 ipaddress() {
-    address="$(ip a | grep .255 | grep -v wlo1 | cut -d ' ' -f6 | sed 's/\/24//')"
+    address="$(ip a | grep .255 | grep -v wlp2s0 | cut -d ' ' -f6 | sed 's/\/24//')"
     echo "$address"
 }
 
 vpnconnection() {
-    state="$(ip a | grep tun0 | grep inet | wc -l)"
+    state="$(ip a | grep virbr | grep inet | wc -l)"
 
 if [ $state = 1 ]; then
     echo "ﱾ"

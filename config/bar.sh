@@ -26,7 +26,7 @@ memicon() {
 
 mem() {
   mem=`free | awk '/Mem/ {printf "%dM/%dM\n", $3 / 1024.0, $2 / 1024.0 }'`
-  echo -e "$mem"
+  echo -e "$mem "
 }
 
 ##############################
@@ -58,8 +58,8 @@ vol() {
 #	    NETWORK
 ##############################
 networkicon() {
-	wire="$(ip a | grep eno1 | grep inet | wc -l)"
-	wifi="$(ip a | grep wlp2s0 | grep inet | wc -l)"
+	wire="$(ip a | grep eth0 | grep inet | wc -l)"
+	wifi="$(ip a | grep wlan0 | grep inet | wc -l)"
 
 	if [ $wire = 1 ]; then
 		echo "ok"
@@ -68,26 +68,24 @@ networkicon() {
 	else
     		echo "ng"
 	fi
-
 }
 
 ipaddress() {
-    address="$(ip a | grep .255 | grep -v wlp2s0 | cut -d ' ' -f6 | sed 's/\/24//')"
-    echo "$address"
+	    address="$(ip a | grep .255 | grep -v wlp2s0 | cut -d ' ' -f6 | sed 's/\/24//')"
+	        echo "$address"
 }
 
-vpnconnection() {
-    state="$(ip a | grep virbr | grep inet | wc -l)"
 
-if [ $state = 1 ]; then
-    echo "ﱾ"
-else
-    echo ""
-fi
-}
+#############################
+#           DATE
+#############################
 
 dateinfo() {
     echo "$(date "+%b %d %Y (%a)")"
+}
+
+dateicon() {
+    echo -e " "
 }
 
 clockinfo() {
@@ -99,11 +97,11 @@ clockinfo() {
       #loops forever outputting a line every SLEEP_SEC secs
       while :; do
 	echo "$(cpuicon) $(cpu)\
-    || $(dateinfo) $(clockinfo)\
+    || $(dateinfo) $(dateicon) $(clockinfo)\
     || $(vol)\
     || $(memicon) $(mem)\
     || $(hddicon) $(hdd)\
-    || $(networkicon) $(ipaddress) $(vpnconnection)\
+    || $(networkicon) $(ipaddress)\
     "
         sleep $SLEEP_SEC
 		done

@@ -5,4 +5,4 @@
 ## programs
 
 xorg xorg-xinit spectrwm pamixer xlockmore dmenu *xterm/urxvtconfig/rxvt-unicode/kitty mpv flameshot jpegexiforient leafpad (* mousepad, gedit, medit, etc..)
-lxappearance mc ranger picom papirus-icon-theme Adapta/adapta-gtk-theme acpi font-awesome5 font-droid-ttf dejavu-fonts-ttf ipafont-fonts-otf noto-fonts-cjk noto-fonts-ttf noto-fonts-ttf-extras Fonts-TLWG-otf
+lxappearance mc ranger picom papirus-icon-theme Adapta/adapta-gtk-theme acpi font-awesome5 ttf-droid ttf-dejavu ttf-fira-code ttf-fira-sans ipafont-fonts-otf noto-fonts-cjk noto-fonts-ttf noto-fonts-ttf-extras Fonts-TLWG-otf

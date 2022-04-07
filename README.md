@@ -6,8 +6,9 @@ It was originally named scrotwm. Whether the humor was amusing, infantile, or bo
 After installation, a default spectrwm.conf is created. If building from source, it will be in the spectrwm directory created after untarring the tarball. In Ubuntu based systems, as well as Fedora, it's /etc/spectrwm.conf. In FreeBSD it's /usr/local/etc/spectrwm.conf
 
 
-![image](https://user-images.githubusercontent.com/83835896/154203741-562e60b8-ea01-47d3-a666-d1671d8bbb1f.png)
-![image](https://user-images.githubusercontent.com/83835896/154204399-29ea357f-804f-406c-b239-62c1e8e0693b.png)
-![image](https://user-images.githubusercontent.com/83835896/154204653-1118eb41-68e6-4402-94c1-f130a9f8c7a1.png)
-![image](https://user-images.githubusercontent.com/83835896/154204775-467cc072-5f0d-4ba1-8aa9-ec5d0b04c198.png)
-![image](https://user-images.githubusercontent.com/83835896/154205035-5a50e072-d0e2-476c-b995-cf3bc9ed637f.png)
+![image](https://user-images.githubusercontent.com/83835896/162127226-41eaff7d-fce6-4af3-bf14-9f94b78595e4.png)
+![image](https://user-images.githubusercontent.com/83835896/162127345-8e11f5cd-a39e-4308-a267-05683e307d2a.png)
+![image](https://user-images.githubusercontent.com/83835896/162127614-e9ae6f54-c22e-419d-a881-d77ecadd1999.png)
+![image](https://user-images.githubusercontent.com/83835896/162127823-0372cf1d-258c-45fe-9244-21a0ef4bdd4c.png)
+![image](https://user-images.githubusercontent.com/83835896/162127875-7ce3eb0e-3970-4e3b-964a-0453ff0a12a8.png)
+![image](https://user-images.githubusercontent.com/83835896/162127943-6d192e6e-fdeb-48c8-956f-3850ef254185.png)

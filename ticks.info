@@ -8,3 +8,22 @@ xorg spectrwm pamixer xlockmore dmenu *xterm/rxvt-unicode/kitty mpv flameshot lx
 nerd-fonts-ttf nerd-fonts-otf ipafont-fonts-otf noto-fonts-cjk noto-fonts-ttf noto-fonts-ttf-extras Fonts-TLWG-otf
 
 paru/yay:(orchis-theme)
+
+## In case of installing picom, for its correct operation; it is configured in:
+doas nano/vim /usr/share/examples/picom/picom.sample.conf
+## On artix:
+doas vi/nano /etc/xdg/picom.conf
+    -- On Shadows
+    # Blue color value of shadow (0.0 - 1.0, defaults to 0).
+    shadow-blue = 4
+    # Hex string color value of shadow (#000000 - #FFFFFF, defaults to #000000). This option will override options set shadow-(red/green/blue)
+    shadow-color = "#726467"
+ -- On Transparency/Opacity
+    inactive-opacity-override = true
+    # inactive-opacity-override = false;
+    opacity-rule = [
+      "80:class_g = 'alacritty'",
+      "88:class_g = 'firefox'",
+      "76:class_g = 'rofi'",
+      "94:class_g = 'leafpad'",
+      "78:class_g = 'lxappearance'"]

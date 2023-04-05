@@ -4,7 +4,7 @@
 
 ## programs
 
-xorg spectrwm pamixer xlockmore dmenu *xterm/rxvt-unicode/kitty mpv flameshot lxappearance mc ranger picom papirus-icon-theme Adapta/adapta-gtk-theme acpi font-awesome5 ttf-droid/fonts-droid-ttf fonts-dejavu/dejaVu-fonts-ttf ttf-fira-code/fonts-firacode
+xorg (xor-xinit) spectrwm pamixer xlockmore dmenu *xterm/rxvt-unicode/kitty mpv scrot lxappearance mc ranger picom papirus-icon-theme Adapta/adapta-gtk-theme acpi font-awesome5 ttf-droid/fonts-droid-ttf fonts-dejavu/dejaVu-fonts-ttf ttf-fira-code/fonts-firacode hddtemp playerctl mousepad
 nerd-fonts-ttf nerd-fonts-otf ipafont-fonts-otf noto-fonts-cjk noto-fonts-ttf noto-fonts-ttf-extras Fonts-TLWG-otf xorg-fonts-100dpi xorg-fonts-75dpi
 
 paru/yay:(orchis-theme)
@@ -22,8 +22,8 @@ doas vi/nano /etc/xdg/picom.conf
     inactive-opacity-override = true
     # inactive-opacity-override = false;
     opacity-rule = [
-      "80:class_g = 'alacritty'",
+      "80:class_g = 'urxvt'",
       "88:class_g = 'firefox'",
       "76:class_g = 'rofi'",
-      "94:class_g = 'leafpad'",
+      "94:class_g = 'mousepad'",
       "78:class_g = 'lxappearance'"]

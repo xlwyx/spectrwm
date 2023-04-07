@@ -10,5 +10,6 @@ After installation, a default spectrwm.conf is created. If building from source,
 ![image](https://i.imgur.com/bXi2TY4.jpg)
 ![image](https://i.imgur.com/24PNSU6.png)
 ![image](https://i.imgur.com/ZMx7y4W.jpg)
-![image][https://i.imgur.com/PLDGyaa.png]
-|[image](https://i.imgur.com/51gjcHb.jpg)
+![image](https://i.imgur.com/PLDGyaa.png)
+![image](https://i.imgur.com/51gjcHb.jpg)
+![image](https://i.imgur.com/kd9mdvr.png)
